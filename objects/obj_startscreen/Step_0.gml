@@ -1,6 +1,7 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 checkInputs();
+
 if(global.button_bottom_pressed && menuIndex == 0){
 	menuIndex = 1;
 }

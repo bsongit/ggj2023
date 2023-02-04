@@ -5,3 +5,5 @@ window_set_fullscreen(true);
 timer = 0;
 
 maxTimer = 300;
+
+obj_transitionIN.isRunning = true;

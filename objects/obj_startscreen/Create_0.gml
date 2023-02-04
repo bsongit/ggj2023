@@ -3,3 +3,4 @@
 
 
 menuIndex = 0;
+obj_transitionIN.isRunning = true;

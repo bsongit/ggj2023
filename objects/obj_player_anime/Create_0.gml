@@ -23,6 +23,8 @@ isInvensible = false;
 debuggerHudInstance = 0;
 var localCounterJump = 0;
 
+
+
 animImpulseAtkTimer = 0;
 animImpulseAtkCounter = 0;
 
@@ -47,6 +49,7 @@ instance_create_layer(x,y,"runtime",obj_player_front_colision);
 instance_create_layer(x,y,"runtime",obj_player_roof_colision);
 instance_create_layer(x,y,"runtime",obj_cam);
 instance_create_layer(x,y,"HUD",obj_timer);
+instance_create_layer(x,y,"HUD",obj_lifepoint_handler);
 instance_create_layer(x,y,"player",obj_anim_handler);
 //weaponInstance = instance_create_layer(x,y,"player",props().currentLeftHand);
 weaponInstance = obj_null;
