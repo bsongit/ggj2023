@@ -3,4 +3,4 @@
 draw_set_font(fnt_pt_br);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
-draw_text_transformed(550,400,"GAME OVER",5,5,0);
+draw_text_transformed(500,400,"GAME OVER",5,5,0);

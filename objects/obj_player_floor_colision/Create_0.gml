@@ -3,6 +3,6 @@
 
 
 
-barDistance = 60;
+barDistance = 50;
 
 

@@ -13,6 +13,13 @@ else if (damageTimeCounter >= maxDamageTime && props().pAnim.animRoll != sprite_
 	isInvensible = false;
 }
 
+
+if(timer == 0){
+	props()._hp -=1;
+	 newSave(0);
+	room_restart();
+}
+
 //if(global.button_Debbug_pressed){
 //	if(debuggerHudInstance == 0)
 //		debuggerHudInstance = instance_create_layer(x,y,"HUD",obj_debugger_hud);

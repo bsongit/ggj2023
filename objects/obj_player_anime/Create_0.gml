@@ -11,7 +11,7 @@ roll_direction = 1;
 x_direction = 1;
 horizontal_speed = min_x_speed;
 vertical_speed = min_y_speed;
-jump_force = 180;
+jump_force = 256;
 jump_size = jump_force;
 player_state = "is falling";
 wallLimiter = false;
@@ -28,7 +28,7 @@ var localCounterJump = 0;
 animImpulseAtkTimer = 0;
 animImpulseAtkCounter = 0;
 
-timer = 0;
+timer = -1;
 timeTaxUpdate = 50;
 timeStepCounter = 0;
 pauseTime = false;
@@ -54,8 +54,8 @@ instance_create_layer(x,y,"player",obj_anim_handler);
 //weaponInstance = instance_create_layer(x,y,"player",props().currentLeftHand);
 weaponInstance = obj_null;
 camera_set_view_target(view_camera[0],obj_cam);
-if(props().currentLeftHand != obj_null)
-	setAnimBasedOnWeapon(props().currentLeftHand);
+//if(props().currentLeftHand != obj_null)
+//	setAnimBasedOnWeapon(props().currentLeftHand);
 	
 
 

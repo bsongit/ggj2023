@@ -4,4 +4,6 @@
 draw_set_font(fnt_pt_br);
 draw_set_halign(fa_left);
 draw_set_color(c_white)
-draw_text_transformed(1200,50,string(obj_player_anime.timer),10,10,0);
+if(obj_player_anime.timer >= 0){
+	draw_text_transformed(1500,80,string(obj_player_anime.timer),8,8,0);
+}

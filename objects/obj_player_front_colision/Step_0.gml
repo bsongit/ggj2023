@@ -3,9 +3,9 @@
 
 if(!obj_player_anime.freezeMode){
 	if(obj_player_anime.x_direction < 0)
-		x = obj_player_anime.x - 64;
+		x = obj_player_anime.x - 20;
 	if(obj_player_anime.x_direction > 0)
-		x = obj_player_anime.x + 64;	
+		x = obj_player_anime.x + 20;	
 	y = obj_player_anime.y;
 
 
