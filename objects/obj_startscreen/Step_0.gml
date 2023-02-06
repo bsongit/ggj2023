@@ -14,6 +14,6 @@ if(global.button_Enter_pressed){
 		room_goto(level1)
 	}
 	else if(menuIndex == 1){
-	
+		menuCredits = !menuCredits;
 	}
 }
