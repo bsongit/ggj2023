@@ -15,9 +15,34 @@ else if (damageTimeCounter >= maxDamageTime && props().pAnim.animRoll != sprite_
 
 
 if(timer == 0){
-	props()._hp -=1;
-	 newSave(0);
-	room_restart();
+		obj_rootPoint_A.activePoint = false;
+		obj_rootPoint_B.activePoint = false;
+		if(room == level1)
+		{
+		obj_horizontal_wood.visible = false;
+		}
+		
+		if(room == level2)
+		{
+		obj_horizontal_wood2.visible = false;
+		obj_horizontal_wood3.visible = false;
+		}
+	if(room == level3 || room == level4){
+		obj_rootPoint_C.activePoint = false;
+		obj_rootPoint_D.activePoint = false;
+		obj_horizontal_wood2.visible = false;
+		obj_horizontal_wood3.visible = false;
+	}
+	if (room == level4){
+		obj_horizontal_wood.visible = false;
+		obj_horizontal_wood2.visible = false;
+		obj_horizontal_wood3.visible = false;
+		obj_horizontal_wood4.visible = false;
+		obj_rootPoint_E.activePoint = false;
+		obj_rootPoint_F.activePoint = false;
+		obj_rootPoint_G.activePoint = false;
+		obj_rootPoint_H.activePoint = false;
+	}
 }
 
 //if(global.button_Debbug_pressed){
@@ -122,22 +147,22 @@ if(!freezeMode){
 		//	global.animtemp = props().pAnim.animIdle;
 		//	setAnimAtObj(obj_player_anime,props().pAnim.animTopAtk,6,function (){});
 		//}
-		else if((global.button_left && image_xscale > 0 ) && !global.button_right || (global.button_right && image_xscale < 0) && !global.button_left){
-			setAnimAtObj(obj_player_anime,props().pAnim.animTurn,2,function (){
-				if(global.button_right ){
-					x_direction = 1;
-					if(image_xscale < 0)
-						image_xscale = image_xscale * -1;
-				}
-				else if(global.button_left ){
-					x_direction = -1;
-					if(image_xscale > 0)
-						image_xscale = image_xscale * -1;
-				}
+		//else if((global.button_left && image_xscale > 0 ) && !global.button_right || (global.button_right && image_xscale < 0) && !global.button_left){
+		//	setAnimAtObj(obj_player_anime,props().pAnim.animTurn,2,function (){
+		//		if(global.button_right ){
+		//			x_direction = 1;
+		//			if(image_xscale < 0)
+		//				image_xscale = image_xscale * -1;
+		//		}
+		//		else if(global.button_left ){
+		//			x_direction = -1;
+		//			if(image_xscale > 0)
+		//				image_xscale = image_xscale * -1;
+		//		}
 
-				sprite_index = props().pAnim.animRun;
-			});
-		}
+		//		sprite_index = props().pAnim.animRun;
+		//	});
+		//}
 		else if (global.button_left && !global.button_right || global.button_right && !global.button_left ){
 			global.animtemp = props().pAnim.animRun;
 			setAnimAtObj(obj_player_anime,props().pAnim.animRun,-1,function (){});

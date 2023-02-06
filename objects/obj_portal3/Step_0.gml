@@ -8,6 +8,7 @@ if(activeCounter){
 	if(counter < maxDelay){
 		sprite_index = spr_portal3active;
 		obj_raio_teleporte2.visible = true;
+
 		counter++;
 	}
 	else {

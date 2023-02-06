@@ -11,4 +11,5 @@ if(global.button_D_pressed){
 	obj_player_anime.y = obj_portal1.y;
 	activeCounter = true;
 	counter =  0;
+	obj_raio_teleporte.image_index = 0;
 }

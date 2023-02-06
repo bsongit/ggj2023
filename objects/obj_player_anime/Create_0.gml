@@ -51,6 +51,8 @@ instance_create_layer(x,y,"runtime",obj_cam);
 instance_create_layer(x,y,"HUD",obj_timer);
 instance_create_layer(x,y,"HUD",obj_lifepoint_handler);
 instance_create_layer(x,y,"player",obj_anim_handler);
+boxDialog = instance_create_layer(x,y,"player",obj_boxDialog);
+boxDialog.visible = false;
 //weaponInstance = instance_create_layer(x,y,"player",props().currentLeftHand);
 weaponInstance = obj_null;
 camera_set_view_target(view_camera[0],obj_cam);
@@ -196,7 +198,7 @@ function horizontalMoviment(){
 			horizontal_speed = 0;
 			wallLimiter = false;
 		}
-		else if((sprite_index == props().pAnim.animRunAtk1|| sprite_index == props().pAnim.animRunAtk2 || sprite_index == props().pAnim.animTurn || sprite_index == props().pAnim.animJump || sprite_index == props().pAnim.animJumpAtkSide || sprite_index == props().pAnim.animJumpAtkBot || sprite_index == props().pAnim.animJumpAtkTop || sprite_index == props().pAnim.animFall || sprite_index == props().pAnim.animRun || sprite_index == props().pAnim.animImpulseAtk) && !wallLimiter && (global.button_left && !global.button_right || global.button_right && !global.button_left )){
+		else if((sprite_index == props().pAnim.animTurn || sprite_index == props().pAnim.animJump || sprite_index == props().pAnim.animJumpAtkSide || sprite_index == props().pAnim.animJumpAtkBot || sprite_index == props().pAnim.animJumpAtkTop || sprite_index == props().pAnim.animFall || sprite_index == props().pAnim.animRun || sprite_index == props().pAnim.animImpulseAtk) && !wallLimiter && (global.button_left && !global.button_right || global.button_right && !global.button_left )){
 			if(horizontal_speed < max_x_speed){
 				horizontal_speed += aceleration;
 			}
